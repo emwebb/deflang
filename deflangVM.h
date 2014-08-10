@@ -10,13 +10,17 @@
 #include <map>
 #include <vector>
 #include <string>
+#include <sstream> 
+#include <iostream>
 using namespace std;
 class deflangVM {
 public:
     std::map<std::string,int> varMap;
     std::map<std::string,std::vector<std::string> > defMap;
-    std::vector<std::string> programBus;
+    std::vector<std::vector<std::string> > programBus;
     deflangVM();
+    void loadInProgram(std::string program);
+    void exacute();
 private:
 
 };
