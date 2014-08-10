@@ -10,9 +10,3 @@
 deflangVM::deflangVM() {
 }
 
-deflangVM::deflangVM(const deflangVM& orig) {
-}
-
-deflangVM::~deflangVM() {
-}
-

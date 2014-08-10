@@ -17,8 +17,6 @@ public:
     std::map<std::string,std::vector<std::string> > defMap;
     std::vector<std::string> programBus;
     deflangVM();
-    deflangVM(const deflangVM& orig);
-    virtual ~deflangVM();
 private:
 
 };
