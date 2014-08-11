@@ -15,6 +15,7 @@ using namespace std;
 int main(int argc, char** argv) {
     deflangVM* test = new deflangVM();
     test->loadInProgram("He llo\nasd das\ndas dsa");
+    test->exacute();
     return 0;
 }
 

@@ -22,19 +22,38 @@ void deflangVM::loadInProgram(std::string program) {
         istringstream g(s);
         string ss; 
         while (getline(g, ss, ' ')) {
-            cout << ss << endl;
             programParts.push_back(ss);
         }
         deflangVM::programBus.push_back(programParts);
     }
     
-    std::cout << deflangVM::programBus[0][0];
 }
 
 void deflangVM::exacute() {
     bool doNextCycle = true;
     unsigned long progPos = 0;
     while(doNextCycle) {
+        std::vector<std::string> memBus;
+        memBus= deflangVM::programBus[progPos];
+        
+        
+        printMemBus(memBus);
+        progPos++;
+        doNextCycle = progPos < deflangVM::programBus.size();
         
     }
+    
+    
+}
+
+void deflangVM::printMemBus(std::vector<std::string> memBus) {
+    
+        if(memBus.size() != 0) {
+            int commandPos = 0;
+            while(commandPos < memBus.size()) {
+                std::cout << memBus[commandPos] << " ";
+                commandPos++;
+            }
+        }
+        std::cout << endl;     
 }
