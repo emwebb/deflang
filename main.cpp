@@ -7,15 +7,17 @@
 
 #include <cstdlib>
 #include "deflangVM.h"
+#include "console.h"
 using namespace std;
 
 /*
  * 
  */
 int main(int argc, char** argv) {
-    deflangVM* test = new deflangVM();
-    test->loadInProgram("He llo\nasd das\ndas dsa");
-    test->exacute();
+    if(argc == 1) {
+        console* cmd = new console();
+        cmd->start();
+    }
     return 0;
 }
 

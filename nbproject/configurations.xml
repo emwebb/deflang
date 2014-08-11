@@ -4,6 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>console.h</itemPath>
       <itemPath>deflangVM.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -13,6 +14,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>console.cpp</itemPath>
       <itemPath>deflangVM.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
@@ -38,6 +40,10 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="console.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="console.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="deflangVM.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="deflangVM.h" ex="false" tool="3" flavor2="0">
@@ -65,6 +71,10 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="console.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="console.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="deflangVM.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="deflangVM.h" ex="false" tool="3" flavor2="0">

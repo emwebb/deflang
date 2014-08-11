@@ -12,7 +12,7 @@ deflangVM::deflangVM() {
 
 void deflangVM::loadInProgram(std::string program) {
     
-    deflangVM::programBus.empty();
+    deflangVM::programBus.clear();
     
     istringstream f(program);
     string s;    
