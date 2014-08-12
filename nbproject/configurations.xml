@@ -4,8 +4,13 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <logicalFolder name="f1" displayName="nativeFunction" projectFiles="true">
+      </logicalFolder>
       <itemPath>console.h</itemPath>
       <itemPath>deflangVM.h</itemPath>
+      <itemPath>funcAdd.h</itemPath>
+      <itemPath>nativeFunction.h</itemPath>
+      <itemPath>stringUtils.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -14,9 +19,14 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <logicalFolder name="f1" displayName="nativeFunctions" projectFiles="true">
+      </logicalFolder>
       <itemPath>console.cpp</itemPath>
       <itemPath>deflangVM.cpp</itemPath>
+      <itemPath>funcAdd.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
+      <itemPath>nativeFunction.cpp</itemPath>
+      <itemPath>stringUtils.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -48,7 +58,19 @@
       </item>
       <item path="deflangVM.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="funcAdd.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="funcAdd.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="nativeFunction.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="nativeFunction.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="stringUtils.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="stringUtils.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -79,7 +101,19 @@
       </item>
       <item path="deflangVM.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="funcAdd.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="funcAdd.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="nativeFunction.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="nativeFunction.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="stringUtils.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="stringUtils.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>

@@ -8,6 +8,7 @@
 #include "deflangVM.h"
 
 deflangVM::deflangVM() {
+    addNativeFunction("ADD", *new funcAdd());
 }
 
 void deflangVM::loadInProgram(std::string program) {
@@ -31,11 +32,23 @@ void deflangVM::loadInProgram(std::string program) {
 
 void deflangVM::exacute() {
     bool doNextCycle = true;
-    unsigned long progPos = 0;
+    unsigned int progPos = 0;
     while(doNextCycle) {
         std::vector<std::string> memBus;
         memBus= deflangVM::programBus[progPos];
         
+        if(memBus.size() != 0) {
+            
+            int commandPos = 0;
+            while(commandPos < memBus.size()) {
+                if(deflangVM::nativeFunctionMap.find(memBus[commandPos]) != deflangVM::nativeFunctionMap.end()) {
+                    nativeFuncReturner returned = deflangVM::nativeFunctionMap[memBus[commandPos]].callFunction(&memBus,commandPos);
+                    commandPos = returned.commandPos;
+                } else {
+                    commandPos++;
+                }
+            }
+        }
         
         printMemBus(memBus);
         progPos++;
@@ -56,4 +69,8 @@ void deflangVM::printMemBus(std::vector<std::string> memBus) {
             }
         }
         std::cout << endl;     
+}
+
+void deflangVM::addNativeFunction(std::string name, nativeFunction function) {
+    deflangVM::nativeFunctionMap[name] = function;
 }

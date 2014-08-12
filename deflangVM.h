@@ -13,17 +13,21 @@
 #include <string.h>
 #include <sstream> 
 #include <iostream>
-#include <stdlib.h> 
+#include <stdlib.h>
+#include "nativeFunction.h"
+#include "funcAdd.h"
 using namespace std;
+
 class deflangVM {
 public:
-    std::map<std::string,std::string> varMap;
+    std::map<std::string,nativeFunction> nativeFunctionMap;
     std::map<std::string,std::vector<std::string> > defMap;
     std::vector<std::vector<std::string> > programBus;
     deflangVM();
     void loadInProgram(std::string program);
     void exacute();
     void printMemBus(std::vector<std::string> memBus);
+    void addNativeFunction(std::string name, nativeFunction function);
 private:
 
 };

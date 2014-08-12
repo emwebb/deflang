@@ -37,7 +37,10 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/console.o \
 	${OBJECTDIR}/deflangVM.o \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/funcAdd.o \
+	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/nativeFunction.o \
+	${OBJECTDIR}/stringUtils.o
 
 
 # C Compiler Flags
@@ -74,10 +77,25 @@ ${OBJECTDIR}/deflangVM.o: deflangVM.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/deflangVM.o deflangVM.cpp
 
+${OBJECTDIR}/funcAdd.o: funcAdd.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/funcAdd.o funcAdd.cpp
+
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+
+${OBJECTDIR}/nativeFunction.o: nativeFunction.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/nativeFunction.o nativeFunction.cpp
+
+${OBJECTDIR}/stringUtils.o: stringUtils.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/stringUtils.o stringUtils.cpp
 
 # Subprojects
 .build-subprojects:
