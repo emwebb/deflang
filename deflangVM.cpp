@@ -9,6 +9,7 @@
 
 deflangVM::deflangVM() {
     addNativeFunction("ADD", *new funcAdd());
+    addNativeFunction("ADD", *new funcSubtract());
 }
 
 void deflangVM::loadInProgram(std::string program) {

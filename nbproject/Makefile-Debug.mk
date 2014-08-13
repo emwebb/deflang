@@ -38,6 +38,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/console.o \
 	${OBJECTDIR}/deflangVM.o \
 	${OBJECTDIR}/funcAdd.o \
+	${OBJECTDIR}/funcSubtract.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/memBusUtils.o \
 	${OBJECTDIR}/nativeFunction.o \
@@ -82,6 +83,11 @@ ${OBJECTDIR}/funcAdd.o: funcAdd.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/funcAdd.o funcAdd.cpp
+
+${OBJECTDIR}/funcSubtract.o: funcSubtract.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/funcSubtract.o funcSubtract.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}

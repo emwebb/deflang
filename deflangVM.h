@@ -16,6 +16,7 @@
 #include <stdlib.h>
 #include "nativeFunction.h"
 #include "funcAdd.h"
+#include "funcSubtract.h"
 using namespace std;
 
 class deflangVM {

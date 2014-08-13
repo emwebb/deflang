@@ -13,7 +13,7 @@ using namespace std;
 class deflangVM;
 class nativeFunction {
 public:
-    void callFunction(std::vector<std::string>* memBus, int*  commandPos, deflangVM * vm);
+    virtual void callFunction(std::vector<std::string>* memBus, int*  commandPos, deflangVM * vm);
 
 };
 

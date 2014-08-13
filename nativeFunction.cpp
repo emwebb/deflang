@@ -8,3 +8,7 @@
 #include "nativeFunction.h"
 
 
+void nativeFunction::callFunction(std::vector<std::string>* memBus, int* commandPos, deflangVM* vm) {
+    *commandPos ++;
+}
+

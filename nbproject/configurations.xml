@@ -9,6 +9,7 @@
       <itemPath>console.h</itemPath>
       <itemPath>deflangVM.h</itemPath>
       <itemPath>funcAdd.h</itemPath>
+      <itemPath>funcSubtract.h</itemPath>
       <itemPath>memBusUtils.h</itemPath>
       <itemPath>nativeFunction.h</itemPath>
       <itemPath>stringUtils.h</itemPath>
@@ -25,6 +26,7 @@
       <itemPath>console.cpp</itemPath>
       <itemPath>deflangVM.cpp</itemPath>
       <itemPath>funcAdd.cpp</itemPath>
+      <itemPath>funcSubtract.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
       <itemPath>memBusUtils.cpp</itemPath>
       <itemPath>nativeFunction.cpp</itemPath>
@@ -63,6 +65,10 @@
       <item path="funcAdd.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="funcAdd.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="funcSubtract.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="funcSubtract.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -110,6 +116,10 @@
       <item path="funcAdd.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="funcAdd.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="funcSubtract.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="funcSubtract.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>

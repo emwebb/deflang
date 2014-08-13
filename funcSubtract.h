@@ -1,25 +1,27 @@
 /* 
- * File:   funcAdd.h
+ * File:   funcSubtract.h
  * Author: border2
  *
- * Created on 12 August 2014, 12:24
+ * Created on 13 August 2014, 10:54
  */
 
-#ifndef FUNCADD_H
-#define	FUNCADD_H
+#ifndef FUNCSUBTRACT_H
+#define	FUNCSUBTRACT_H
+
 #include "nativeFunction.h"
 #include "stringUtils.h"
 #include "memBusUtils.h"
 #include "console.h"
 #include "deflangVM.h"
 #include <sstream>
-class funcAdd : public nativeFunction{
+
+class funcSubtract : public nativeFunction{
 public:
-    funcAdd();
+    funcSubtract();
     void callFunction(std::vector<std::string>* memBus, int*  commandPos, deflangVM * vm);
 private:
 
 };
 
-#endif	/* FUNCADD_H */
+#endif	/* FUNCSUBTRACT_H */
 
