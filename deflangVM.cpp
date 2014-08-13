@@ -42,8 +42,7 @@ void deflangVM::exacute() {
             int commandPos = 0;
             while(commandPos < memBus.size()) {
                 if(deflangVM::nativeFunctionMap.find(memBus[commandPos]) != deflangVM::nativeFunctionMap.end()) {
-                    nativeFuncReturner returned = deflangVM::nativeFunctionMap[memBus[commandPos]].callFunction(&memBus,commandPos);
-                    commandPos = returned.commandPos;
+                    deflangVM::nativeFunctionMap[memBus[commandPos]].callFunction(&memBus,&commandPos,this);
                 } else {
                     commandPos++;
                 }

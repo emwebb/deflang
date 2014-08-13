@@ -39,6 +39,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/deflangVM.o \
 	${OBJECTDIR}/funcAdd.o \
 	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/memBusUtils.o \
 	${OBJECTDIR}/nativeFunction.o \
 	${OBJECTDIR}/stringUtils.o
 
@@ -86,6 +87,11 @@ ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+
+${OBJECTDIR}/memBusUtils.o: memBusUtils.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/memBusUtils.o memBusUtils.cpp
 
 ${OBJECTDIR}/nativeFunction.o: nativeFunction.cpp 
 	${MKDIR} -p ${OBJECTDIR}

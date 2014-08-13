@@ -9,6 +9,9 @@
 #define	FUNCADD_H
 #include "nativeFunction.h"
 #include "stringUtils.h"
+#include "memBusUtils.h"
+#include "console.h"
+#include "deflangVM.h"
 #include <sstream>
 class funcAdd : public nativeFunction{
 public:

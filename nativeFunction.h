@@ -7,18 +7,13 @@
 
 #ifndef NATIVEFUNCTION_H
 #define	NATIVEFUNCTION_H
-#include <string>
 #include <vector>
+#include <string>
 using namespace std;
-struct nativeFuncReturner {
-    unsigned int commandPos;
-    bool error;
-    string errorm;
-};
-
+class deflangVM;
 class nativeFunction {
 public:
-    nativeFuncReturner callFunction(std::vector<std::string>* memBus, int commandPos);
+    void callFunction(std::vector<std::string>* memBus, int*  commandPos, deflangVM * vm);
 
 };
 
